@@ -28,7 +28,7 @@ public interface UserDAO {
     void update(User user);
 
     @Delete("DELETE FROM user WHERE id =#{id}")
-    void delete(Long id);
+    void delete(@Param("id") Long id);
 
     @Insert("INSERT INTO user(id,name, age) VALUES(#{id},#{name}, #{age})")
     int insertByUser(User user);
